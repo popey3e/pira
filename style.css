@@ -1,0 +1,302 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+}
+
+/* display: flex;
+justify-content: center;
+align-items: center;
+min-height: 100vh;
+flex-direction: column;
+overflow: hidden;
+position: relative; */
+/* background-image: linear-gradient( 174.2deg,  rgba(255,244,228,1) 7.1%, rgba(240,246,238,1) 67.4% ); */
+/* body {
+} */
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.video{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    min-width: 100vw;
+    min-height: 100vh;
+    z-index: -9999;
+    opacity: .45;
+}
+
+.card{
+    position: relative;
+    width: 40vh;
+    height: 60vh;
+    background: #fff;
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    box-shadow: 10px 15px 30px rgba(0,0,0,.3);
+    transition: 1s;
+    margin: 2% 0 2% 0;
+}
+
+.card .details {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* text-align: center; */
+}
+
+/* For name */
+.card .details .name {
+    padding: 3%;
+}
+
+.card .details .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+}
+
+.card .details .content h2{
+    text-align: center;
+    font-weight: bold;
+    line-height: 1em;
+    font-size: 20px;
+}
+
+/* .card:hover {
+    transform: translateX(50%);
+    width: 28vh;
+    height: 48vh;
+} */
+.card-js {
+    transform: translateX(50%);
+    width: 40vw;
+}
+
+.card .details .wishes {
+    font-size: 13px;
+}
+
+@media only screen and (min-width: 1500px) {
+    .card {
+        width: 20vw;
+    }
+
+    .card .details .wishes {
+        font-size: 18px;
+        /* margin-top: 3%; */
+    }
+
+    .card .details .memories {
+        margin: 1%;
+    }
+
+    .card .details .memories a{
+        font-size: 18px;
+    }
+}
+
+.card .details .memories a{
+    font-weight: bolder;
+    text-decoration: none;
+    color: #000;
+    transition: .5s;
+}
+
+.card .imgbox {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transform-origin: left;
+    /* What is this!? */
+    transform-style: preserve-3d;
+    background: #fff;
+    transition: 1s;
+    box-shadow: 10px 15px 30px rgba(0,0,0,.3);
+}
+
+/* .card:hover .imgbox {
+    transform: rotateY(-180deg);
+} */
+.card-js .imgbox {
+    transform: rotateY(-180deg);
+}
+
+.card .imgbox img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+}
+
+.card .imgbox img:nth-child(2) {
+    transform: rotateY(180deg);
+}
+
+img, .details, .imgbox, .card {
+    border-radius: 5%;
+}
+
+.open-btn {
+    margin: 1%;
+    font-size: 1.5em;
+    transition: .5s;
+}
+
+.open-btn:hover a, .card .details .memories a:hover {
+    color: #555151;
+}
+
+
+/* @keyframes opnbtn-size {
+    50% {font-size: larger;}
+    100% {font-size: smaller;}
+} */
+
+.open-btn a {
+    text-decoration: underline;
+    color: #333232;
+    font-weight: bold;
+    transition: .3s;
+}
+
+.card .wishes {
+    text-align: justify;
+    width: 95%;
+    margin:10px;
+    font-size: 14px;
+}
+
+.card .details .memories {
+    margin-top: 30px;
+}
+
+/* .card .details {
+} */
+
+
+@media only screen and (max-width: 550px) {
+    .card .details .content h2 {
+        font-size: 11px;
+    }
+
+    .card-js {
+        width: 170px;
+        height: 270px;
+    }
+
+    .card .details .name p{
+        font-size: 12px;
+    }
+    
+    .card .details .wishes {
+        font-size: 10px;
+        width: 100%;
+        margin: 5px;
+    }
+
+    .card .details .memories a{
+        font-size: 10px;
+    }
+
+    .card .details .memories {
+        margin-top: 0;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    .card {
+        width: 70vw;
+    }
+
+    .card .details .content h2 {
+      font-size: 11px;
+    }
+
+    .card-js {
+        width: 120px;
+        height: 220px;
+    }
+
+    .card .details .name p {
+        font-size: 8px;
+    }
+
+    .card .details .wishes {
+        font-size: 8px;
+        width: 100%;
+        margin: 5px;
+    }
+
+    .card .details .memories a{
+        font-size: 5px;
+    }
+
+    .open-btn {
+        margin-top: 5%;
+        font-size: 15px;
+    }
+}
+
+@media only screen and (max-width: 260px) {
+    .card .details .content h2 {
+        font-size: 8px;
+    }
+
+    .card .details {
+        padding: 1%;
+    }
+
+    .card-js {
+        width: 90px;
+        height: 110px;
+    }
+
+    .card .details .name p {
+        font-size: 5px;
+    }
+
+    .card .details .wishes {
+        font-size: 5px;
+        width: 100%;
+        margin: 0;
+        padding: 4px;
+    }
+
+    .card .details .memories a{
+        font-size: 5px;
+        margin-top: 2px;
+    }
+
+    .card .details .memories {
+        height: auto;
+        display: flex;
+        align-items: center;
+    }
+}
