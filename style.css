@@ -29,14 +29,14 @@ position: relative; */
     overflow: hidden;
 }
 
-.video{
+.video {
     position: absolute;
     bottom: 0;
     left: 0;
     min-width: 100vw;
     min-height: 100vh;
     z-index: -9999;
-    opacity: .45;
+    opacity: .50;
 }
 
 .card{
@@ -67,7 +67,7 @@ position: relative; */
 
 /* For name */
 .card .details .name {
-    padding: 3%;
+    padding: 3%;    
 }
 
 .card .details .content {
@@ -169,8 +169,12 @@ img, .details, .imgbox, .card {
     transition: .5s;
 }
 
-.open-btn:hover a, .card .details .memories a:hover {
+.open-btn:hover a, .card .details .memories a:hover, .album-container .back-btn a:hover {
     color: #555151;
+}
+
+.container .back-btn a {
+    font-size: 20px;
 }
 
 
@@ -179,7 +183,7 @@ img, .details, .imgbox, .card {
     100% {font-size: smaller;}
 } */
 
-.open-btn a {
+.open-btn a, .album-container .back-btn a {
     text-decoration: underline;
     color: #333232;
     font-weight: bold;
@@ -200,6 +204,35 @@ img, .details, .imgbox, .card {
 /* .card .details {
 } */
 
+/* .container .back-btn a{
+    
+} */
+
+
+.album .carousel{
+    width: 600px;
+}
+
+/* ALBUM COntainer */
+.album-container .album {
+    margin: 3%;
+}
+
+.album-container .back-btn a {
+    font-size: 20px;
+}
+
+div.container.album-container {
+    margin: 0;
+    padding: 0;
+    min-width: 100vw;
+} 
+
+@media only screen and (max-width: 620px) {
+    .album .carousel{
+        width: 500px;
+    }
+}
 
 @media only screen and (max-width: 550px) {
     .card .details .content h2 {
@@ -227,6 +260,10 @@ img, .details, .imgbox, .card {
 
     .card .details .memories {
         margin-top: 0;
+    }
+    
+    .album .carousel{
+        width: 350px;
     }
 }
 
@@ -261,6 +298,14 @@ img, .details, .imgbox, .card {
     .open-btn {
         margin-top: 5%;
         font-size: 15px;
+    }
+
+    .album .carousel{
+        width: 250px;
+    }
+
+    .album-container .back-btn a {
+        font-size: 13px;
     }
 }
 
@@ -298,5 +343,9 @@ img, .details, .imgbox, .card {
         height: auto;
         display: flex;
         align-items: center;
+    }
+
+    .album .carousel{
+        width: 150px;
     }
 }

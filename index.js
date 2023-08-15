@@ -8,7 +8,7 @@ opnBtn.addEventListener("click", () => {
         opnBtn.innerText = text;
         opnCard.setAttribute("class","card card-js");
     } else {
-        opnBtn.innerText = "Open the Card!";
+        opnBtn.innerText = "Open the Card";
         opnCard.removeAttribute("class","card-js")
         opnCard.setAttribute("class","card");
     }
