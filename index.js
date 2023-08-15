@@ -17,3 +17,4 @@ opnBtn.addEventListener("click", () => {
 journeyBtn.addEventListener("click",() => {
     console.log("journey btn clicked");
 });
+
