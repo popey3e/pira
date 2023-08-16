@@ -36,7 +36,7 @@ position: relative; */
     min-width: 100vw;
     min-height: 100vh;
     z-index: -9999;
-    opacity: .50;
+    opacity: .75;
 }
 
 .card{
@@ -170,7 +170,7 @@ img, .details, .imgbox, .card {
 }
 
 .open-btn:hover a, .card .details .memories a:hover, .album-container .back-btn a:hover {
-    color: #555151;
+    color: #a1a0a0;
 }
 
 .container .back-btn a {
@@ -185,7 +185,7 @@ img, .details, .imgbox, .card {
 
 .open-btn a, .album-container .back-btn a {
     text-decoration: underline;
-    color: #333232;
+    color: #c9c9c9;
     font-weight: bold;
     transition: .3s;
 }
